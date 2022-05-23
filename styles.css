@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("../fonts/Booter - Zero Zero.woff") format("woff"),
+         url("../fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* global styles*/
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+.uppercase{
+    text-transform: uppercase;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+
+/* header styles begin */
+
+header{
+    text-align: center;
+    background-image: url(images/bcg-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+}
+nav {
+    padding: 2% 0;
+    border-bottom: thin solid white;
+}
+
+.nav a{
+    margin: 10px 5%;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+}
+
+.nav a:hover{
+    text-decoration: underline 2px;
+    transition: 1s ease-in-out;
+}
+
+.title h1 {
+    font-family: "Booter - Zero Zero";
+    font-size: 5rem;
+    color: white;
+}
+
+.latestarrivals .latestarrivalsHone h3{
+    margin-bottom: 40px;
+}
+
+.latestarrivals .latestarrivalsHone a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    background-color: rgba(218, 216, 216, 0.61);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.latestarrivals .play {
+    font-size: 2em;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline;
+    cursor: pointer;
+}
+/* header styles end */
+
+/* main styles */
+.table{
+    display: table;
+    
+}
+
+.row{
+    display: table-row;
+}
+
+.rowContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.td{
+    margin: 2px 3px;
+    padding: 5px 10px;
+}
