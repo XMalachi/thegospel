@@ -10,6 +10,12 @@
     font-style: normal;
 }
 
+:root{
+    --primary: #c7c7c7;
+    --mainWhite: #fff;
+    --dark: #000;
+}
+
 /* global styles*/
 *{
     box-sizing: border-box;
@@ -20,12 +26,15 @@ body{
     margin: 0;
 }
 
-
+/* default styles */
 .uppercase{
     text-transform: uppercase;
 }
 .capitalize{
     text-transform: capitalize;
+}
+.booter {
+    font-family: "Booter - Zero Zero";
 }
 
 /* header styles begin */
@@ -33,34 +42,36 @@ body{
 header{
     text-align: center;
     background-image: url(images/bcg-header.jpg);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 80vh;
+    height: 70vh;
 }
 nav {
     padding: 2% 0;
-    border-bottom: thin solid white;
+    border-bottom: thin solid var(--mainWhite);
+    background-color: rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
 }
 
 .nav a{
-    margin: 10px 5%;
+    margin: 10px 4%;
     padding: 10px;
     text-decoration: none;
-    font-size: 1.2em;
-    color: white;
+    font-size: 1.1em;
+    color: var(--mainWhite);
 }
 
 .nav a:hover{
-    text-decoration: underline 2px;
+    color: var(--primary);
     transition: 1s ease-in-out;
 }
 
 .title h1 {
-    font-family: "Booter - Zero Zero";
     font-size: 5rem;
-    color: white;
+    color: var(--mainWhite);
 }
 
 .latestarrivals .latestarrivalsHone h3{
@@ -71,38 +82,132 @@ nav {
     text-decoration: none;
     color: black;
     font-size: 1em;
-    background-color: rgba(218, 216, 216, 0.61);
+    background-color: var(--primary);
     padding: 20px 30px;
     border-radius: 10px;
 }
 
-.latestarrivals .play {
+.latestarrivals .play button {
     font-size: 2em;
-    background-color: white;
+    background-color: var(--mainWhite);
     padding: 10px 20px;
     border-radius: 15px;
+    border: none;
     display: inline;
     cursor: pointer;
 }
 /* header styles end */
 
 /* main styles */
-.table{
-    display: table;
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.events h2{
+    font-size: 3rem;
+    text-align: center;
+}
+table{
+    font-size: 0.7rem;
+}
+
+table tr>td{
+    margin: 5px;
+    padding: 5px;
+}
+
+table tr>td{
+    border-bottom: 1px solid black;
+}
+
+table tr>td button{
+    background-color: var(--dark);
+    color: var(--mainWhite);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+table tr>td button:hover{
+    background-color: rgba(0, 0, 0, 0.678);
+    cursor: pointer;
+}
+
+/* footer */
+
+footer{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 80px;
+    height: 200px;
+}
+
+.footernav a{
+    margin-right: 5px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 0.7em;
+    color: var(--mainWhite);
+}
+
+.footernav a:hover{
+    color: var(--primary);
+    transition: 1s ease-in-out;
+}
+
+.footertitle h1{
+    font-size: 2rem;
+    color: var(--mainWhite);
+    margin-right: 20px;
+}
+
+.socials a{
+    color: var(--primary);
+    font-size: 1em;
+}
+.socials a:hover{
+    color: var(--mainWhite);
+}
+
+
+
+@media only screen and (min-width: 1000px){
+    .title h1 {
+        margin: 0;
+        font-size: 10rem;
+    }
+    .latestarrivals {
+        margin-top: 30px;
+    }
+    .events h2{
+        margin: 0 0 40px;
+        font-size: 4rem;
+    }
+    table{
+        font-size: 1rem;
+    }
+    
+    .footernav a{
+        font-size: 1em;
+    }
+    
+    .footertitle h1{
+        font-size: 4rem;
+    }
+    
+    .socials a{
+        font-size: 2em;
+    }
+    
     
 }
 
-.row{
-    display: table-row;
-}
-
-.rowContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.td{
-    margin: 2px 3px;
-    padding: 5px 10px;
+@media only screen and (min-width: 500px){
+    table{
+        font-size: 1rem;
+    }
 }
