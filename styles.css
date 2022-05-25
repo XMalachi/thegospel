@@ -76,11 +76,11 @@ nav {
     font-family: "Booter - Zero Zero", cursive;
 }
 
-.latestarrivals .latestarrivalsHone h3{
+.latestarrivalsHfour h4{
     margin-bottom: 40px;
 }
 
-.latestarrivals .latestarrivalsHone a{
+.latestarrivalsHfour a{
     text-decoration: none;
     color: black;
     font-size: 1em;
@@ -89,7 +89,7 @@ nav {
     border-radius: 10px;
 }
 
-.latestarrivals .play button {
+.play button {
     font-size: 2em;
     background-color: var(--mainWhite);
     padding: 10px 20px;
@@ -98,18 +98,107 @@ nav {
     display: inline;
     cursor: pointer;
 }
+
+.latestarrivalsHfour a:hover + .play button{
+    background-color: red;
+}
 /* header styles end */
 
 /* main styles */
 
-main {
+/* about styles */
+main{
+    margin: 0 10%;
+}
+
+.blogImage{
+    float: left;
+    border-radius: 50%;
+    height: 250px;
+    width: 300px;
+    margin-right: 3.125rem;
+}
+
+.aboutTxt{
+    text-align: justify;
+}
+
+
+/* about styles end */
+
+/* collection styles starts */
+.cards{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-areas: 
+    'one two'
+    'three four'
+    'three five'
+    'six seven'
+    ;
+}
+.cards .one {
+    grid-area: one;
+}
+.cards .two {
+    grid-area: two;
+}
+.cards .three {
+    grid-area: three;
+}
+.cards .four {
+    grid-area: four;
+}
+.cards .five {
+    grid-area: five;
+    padding-top: 0;
+}
+.cards .five h3{
+    margin-top: 0;
+}
+.cards .six {
+    grid-area: six;
+}
+.cards .seven {
+    grid-area: seven;
+}
+
+.card{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .details p {
+    font-family: "Booter - Zero Zero", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
+}
+/* collection styles ends */
+
+
+.container {
     display: flex;
     justify-content: center;
 }
 
-.events h2{
-    font-size: 3rem;
+h2{
+    font-size: 4rem;
     text-align: center;
+    font-family: "Booter - Zero Zero", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h3 {
+    font-size: 2.7rem;
     font-family: "Booter - Zero Zero", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 table{
@@ -125,7 +214,7 @@ table tr>td{
     border-bottom: 1px solid black;
 }
 
-table tr>td button{
+.btn{
     background-color: var(--dark);
     color: var(--mainWhite);
     border: none;
@@ -133,7 +222,7 @@ table tr>td button{
     border-radius: 5px;
 }
 
-table tr>td button:hover{
+.btn:hover{
     background-color: rgba(0, 0, 0, 0.678);
     cursor: pointer;
 }
@@ -191,7 +280,7 @@ footer{
         font-size: 4rem;
     }
     table{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     
     .footernav a{
@@ -213,4 +302,25 @@ footer{
     table{
         font-size: 1rem;
     }
+}
+
+@media only screen and (max-width: 700px){
+
+    /* collection styles resp start */
+    .cards{
+        display: block;
+    }
+    /* collection styles resp ends */
+
+    /* about styles resp start */
+    .blogImage{
+        float: none;
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-radius: 0;
+        margin-right: 0;
+    }
+    /* about styles resp start */
+    
 }
